@@ -5,7 +5,7 @@ package:
 about:
   home: http://minia.genouest.org/dsk/
   license: CeCILL
-  summary: Disk Streaming of K-mers: find and count k-mers in nucleotide sequences
+  summary: "Disk Streaming of K-mers: find and count k-mers in nucleotide sequences"
 
 build:
   number: 2
