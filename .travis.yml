@@ -23,6 +23,7 @@ install:
   - conda info -a
   - conda create -n test python=$TRAVIS_PYTHON_VERSION
   - source activate test
+  - conda install conda-build
   - conda build .
 env:
   global:
