@@ -1,8 +1,5 @@
 language: generic
 env:
-  matrix:
-  - PYTHON_VERSION=2
-  - PYTHON_VERSION=3
   global:
     secure: r+GhFMsOcttqHzHVbe3xgnep90xR5xlvctX4JrBLf6paQ9YqkJhNI9p5dvbtcMvJtNGxfA1fC1gCd1HOPDc9ZN1bGPhnw8jfXAim1Yr6/VJuh0XduejEx0qCStiS6vFqPScReh2NpTDJov46SumF7cv6Syo5qXUHP8d41oIvvvpM74LurqKjMIk9l7aGyPijpNr+BuhpRTeVlhD6+oAZ/nIOY6h6YPzwg3d96nkQ1nEIXUyAMsFOV2xkMGM8+Rh8L2CIIff77HUzS4Sy2Uc3Zx/lCG/lnGGqf54zY2ia7WRzNAOvECp0m3hEQQS3BagoK0zlbZFVicUIhOeLsfCtqJU2N4CMjUbtm2p83UQhCfSL0wkstG+hJq5gK1YUQJN33xNYY+lvnhCQmNApMizFQm1MFriiHN9VldjMeRGkAkIwh5D0/cSt0AEXKw0TQ6J1ZsKZHxQHKie58ztQokluTGyFnY/sgFK54Dh3Rvq2Vmv9PsjqI4ORhDgbmR0rdDcBOxoNj67vDUswWOANObUFJJJ60a3U7QJPQhF4mckYuZAci9TMa0M/UZXqrxS3wo1sXquSGeAh5RCrpCz8kK3GZc4/rJAnZV5FXd55WzSkTvmnDOc1zx3pvdGiKsvAxF5wYg7YyEO+Goloqlp8M2vBwDU8v756MCgZ99+5AtFTwVU=
 os:
@@ -10,9 +7,9 @@ os:
 - osx
 install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-      wget "https://repo.continuum.io/miniconda/Miniconda${PYTHON_VERSION}-latest-Linux-x86_64.sh" -O miniconda.sh;
+      wget "https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh" -O miniconda.sh;
     else
-      wget "https://repo.continuum.io/miniconda/Miniconda${PYTHON_VERSION}-latest-MacOSX-x86_64.sh" -O miniconda.sh;
+      wget "https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh" -O miniconda.sh;
     fi
   - bash miniconda.sh -b -p $HOME/miniconda
   - export PATH="$HOME/miniconda/bin:$PATH"
