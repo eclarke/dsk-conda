@@ -2,8 +2,13 @@ package:
   name: dsk
   version: "1.6906"
 
+about:
+  home: http://minia.genouest.org/dsk/
+  license: CeCILL
+  summary: Disk Streaming of K-mers: find and count k-mers in nucleotide sequences
+
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
