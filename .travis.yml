@@ -1,10 +1,13 @@
 language: generic
 env:
+  matrix:
   - PYTHON_VERSION=2
   - PYTHON_VERSION=3
+  global:
+    secure: r+GhFMsOcttqHzHVbe3xgnep90xR5xlvctX4JrBLf6paQ9YqkJhNI9p5dvbtcMvJtNGxfA1fC1gCd1HOPDc9ZN1bGPhnw8jfXAim1Yr6/VJuh0XduejEx0qCStiS6vFqPScReh2NpTDJov46SumF7cv6Syo5qXUHP8d41oIvvvpM74LurqKjMIk9l7aGyPijpNr+BuhpRTeVlhD6+oAZ/nIOY6h6YPzwg3d96nkQ1nEIXUyAMsFOV2xkMGM8+Rh8L2CIIff77HUzS4Sy2Uc3Zx/lCG/lnGGqf54zY2ia7WRzNAOvECp0m3hEQQS3BagoK0zlbZFVicUIhOeLsfCtqJU2N4CMjUbtm2p83UQhCfSL0wkstG+hJq5gK1YUQJN33xNYY+lvnhCQmNApMizFQm1MFriiHN9VldjMeRGkAkIwh5D0/cSt0AEXKw0TQ6J1ZsKZHxQHKie58ztQokluTGyFnY/sgFK54Dh3Rvq2Vmv9PsjqI4ORhDgbmR0rdDcBOxoNj67vDUswWOANObUFJJJ60a3U7QJPQhF4mckYuZAci9TMa0M/UZXqrxS3wo1sXquSGeAh5RCrpCz8kK3GZc4/rJAnZV5FXd55WzSkTvmnDOc1zx3pvdGiKsvAxF5wYg7YyEO+Goloqlp8M2vBwDU8v756MCgZ99+5AtFTwVU=
 os:
-  - linux
-  - osx
+- linux
+- osx
 install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
       wget "https://repo.continuum.io/miniconda/Miniconda${PYTHON_VERSION}-latest-Linux-x86_64.sh" -O miniconda.sh;
@@ -16,9 +19,12 @@ install:
   - hash -r
   - conda config --set always_yes yes --set changeps1 no
   - conda update -q conda
-  - conda install conda-build
-  # Useful for debugging any issues with conda
+  - conda install conda-build anaconda-client
   - conda info -a
   - conda build .
 script:
   - conda install dsk --use-local
+  - anaconda login --username eclarke --password $ANACONDA_PW
+  - anaconda upload $HOME/miniconda/conda-bld/$TRAVIS_OS_NAME-64/*.tar.bz2
+
+
