@@ -17,11 +17,11 @@ install:
   - hash -r
   - conda config --set always_yes yes --set changeps1 no
   - conda update -q conda
+  - conda install conda-build
   # Useful for debugging any issues with conda
   - conda info -a
   - conda create -n test python=$TRAVIS_PYTHON_VERSION
   - source activate test
-  - conda install conda-build
   - conda build .
 env:
   global:
