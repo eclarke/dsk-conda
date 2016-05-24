@@ -23,6 +23,4 @@ install:
   - conda create -n test python=$TRAVIS_PYTHON_VERSION
   - source activate test
   - conda build .
-env:
-  global:
-    secure: UZIjUCZh1hdPcTCfaDi8/bwqZGPh1W0u+cC6o/1FZ6zjwVhHonlB9eD8SJ4FsMnxWzpG/823HqlIr4e+y1rRpZnpWUNqilaUhrBpwqyBSO7/L1v+d9k1AmjG2qLUWyptAvvPBNfmjlmi3fAH7SLXzj0xcT5lJVtzv4/Kkm21Dkc2fH3ABaxMlqted7rlAbyB1ZTZ7QkkFdDQGWdvpRBWlm995JOF7keEeFz2+NzqWihMCABk6E8HJLTrYDwu9rNqkBnIEYOAYyPMivJdrPk5hF0jFq+/1yWtvrz3Lubc5JKONrV8RL+ShLHJmssn0jLlIMT5i1lTZGUylu5k2eoFappk+Njq0wCImw9iPH3LaAvITXhiVM1R97GnRYWtjOScEMTns48qrG2a73mzvEl+DqMLpsTKuiC0ibffEK6hknguDT+s6Ggldj3opPxIjfQ9Me3H/h3UkBNGUBekMpdDDXNstvUgwyWQSGLxj4WXmkr0JLJhXczeHLJaylDc+QrYA7k4yn+pGktQLPJaPQvHd9sGeRHXURRvBCYEp9OvKs37VeoFpfvW9ljvev/wHXvvt9zhDcocSfw3QpcoOPGJnoZH01HAoWRcuAmEbZxatePK1wWdxJNNxQR+Dvx28Hz5nwOwrzGiR4tXi1IT69eIoGZfYVzqmjzhvNLs6CRBIqQ=
+  
