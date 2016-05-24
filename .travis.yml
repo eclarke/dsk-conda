@@ -21,7 +21,7 @@ install:
   - conda update -q conda
   # Useful for debugging any issues with conda
   - conda info -a
-  - conda create -n test
+  - conda create -n test python=$TRAVIS_PYTHON_VERSION
   - source activate test
   - conda build .
 env:
