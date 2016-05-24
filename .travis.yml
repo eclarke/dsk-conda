@@ -19,8 +19,6 @@ install:
   - conda install conda-build
   # Useful for debugging any issues with conda
   - conda info -a
-  - conda create -n test python=$TRAVIS_PYTHON_VERSION
   - conda build .
 script:
-  - source activate test
   - conda install dsk --use-local
