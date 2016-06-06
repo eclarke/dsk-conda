@@ -3,7 +3,7 @@ package:
   version: "2.1.0"
 
 build:
-  number: 0
+  number: 1
 
 source:
   fn: dsk-2.1.0-Source.tar.gz
@@ -14,4 +14,9 @@ requirements:
   build:
     - cmake
     - gcc
+
+test:
+  commands:
+    - dsk 2>&1 | grep 'dsk options'
+    - dsk2ascii 2>&1 | grep 'dsk2ascii options'
     
