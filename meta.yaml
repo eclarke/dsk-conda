@@ -14,6 +14,7 @@ requirements:
   build:
     - cmake
     - gcc
+    - zlib
 
 test:
   commands:
