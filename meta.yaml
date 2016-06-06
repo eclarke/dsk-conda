@@ -1,26 +1,17 @@
 package:
   name: dsk
-  version: "1.6906"
-
-about:
-  home: http://minia.genouest.org/dsk/
-  license: CeCILL
-  summary: "Disk Streaming of K-mers: find and count k-mers in nucleotide sequences"
+  version: "2.1.0"
 
 build:
-  number: 2
+  number: 0
+
+source:
+  fn: dsk-2.1.0-Source.tar.gz
+  url: http://gatb-tools.gforge.inria.fr/versions/src/dsk-2.1.0-Source.tar.gz
+  md5: 767fcb2b1137b55c6c17ef474656a1f7
 
 requirements:
   build:
     - cmake
     - gcc
-  run:
-    - libgcc
-
-source:
-  url: http://minia.genouest.org/dsk/dsk-1.6906.tar.gz
-  md5: 08e392f93ed66692adb62aa5df972db6
-
-test:
-  commands:
-    - dsk --help
+    
